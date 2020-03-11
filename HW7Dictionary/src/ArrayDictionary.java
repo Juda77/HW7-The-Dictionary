@@ -63,7 +63,11 @@ public class ArrayDictionary implements Dictionary {
     public boolean remove(int key) {
         // homework
     	
+    	if (contains(key) == false) {
+    		return false;
+    	}
     	
+    	KVEntry head = entries[hashFunction(key)];
     	
     	
         return false;
