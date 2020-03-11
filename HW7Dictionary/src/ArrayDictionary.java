@@ -110,6 +110,19 @@ public class ArrayDictionary implements Dictionary {
     		return false;
     	}
     	
+    	int hashKey = hashFunction(key);
+    	
+    	KVEntry curr = entries[hashKey];
+    	while (curr != null) {
+			if (curr.key == key) {
+				
+				return true;
+			}
+			curr = curr.next;
+		}
+    	
+    	
+    	/*
     	for (int i = 0; i < entries.length; i++) {
     		
     		//take current element in map
@@ -125,7 +138,7 @@ public class ArrayDictionary implements Dictionary {
     		}
     				
     	}
-    	
+    	*/
     	return false; //placeholder
     }
 
