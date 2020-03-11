@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 public class ArrayDictionaryTest {
 	
-	
     @Test
     public void demo() {
         int testSize = 5;

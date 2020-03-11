@@ -77,9 +77,6 @@ public class ArrayDictionary implements Dictionary {
     		return true;
     	}
     	
-    	
-    	
-    	
     	while (currNode != null) {
     		
     		//key is found to be first node in linked list
@@ -89,9 +86,7 @@ public class ArrayDictionary implements Dictionary {
     			entries[hashKey] = head;
     			return true;
     		}
-    		
-    		
-    		
+
     		prev = currNode;
     		currNode = currNode.next;
     		
@@ -121,25 +116,7 @@ public class ArrayDictionary implements Dictionary {
 			curr = curr.next;
 		}
     	
-    	
-    	/*
-    	for (int i = 0; i < entries.length; i++) {
-    		
-    		//take current element in map
-    		KVEntry curr = entries[i];
-
-    		//loop through linked list
-    		while (curr != null) {
-    			if (curr.key == key) {
-    				
-    				return true;
-    			}
-    			curr = curr.next;
-    		}
-    				
-    	}
-    	*/
-    	return false; //placeholder
+    	return false; 
     }
 
     // Return the entry value with the given key
