@@ -66,9 +66,36 @@ public class ArrayDictionary implements Dictionary {
     	if (contains(key) == false) {
     		return false;
     	}
+    	int hashKey = hashFunction(key);
+    	KVEntry prev = entries[hashKey];
+    	KVEntry currNode = prev.next;
+    	KVEntry head = prev;
+    	if (prev.key == key) {
+    		
+    		prev = currNode;
+    		entries[hashKey] = prev;
+    		return true;
+    	}
     	
-    	KVEntry head = entries[hashFunction(key)];
     	
+    	
+    	
+    	while (currNode != null) {
+    		
+    		//key is found to be first node in linked list
+    		if (currNode.key == key) {
+    			prev.next = currNode.next;
+    			currNode = null;
+    			entries[hashKey] = head;
+    			return true;
+    		}
+    		
+    		
+    		
+    		prev = currNode;
+    		currNode = currNode.next;
+    		
+    	}
     	
         return false;
     }
