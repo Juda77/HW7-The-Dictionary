@@ -1,7 +1,7 @@
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-
+//
 public class ArrayDictionaryTest {
 	
     @Test
@@ -109,7 +109,7 @@ public class ArrayDictionaryTest {
     			{1},
     			{1, 4, 7, 8}
     	};
-    	
+    	//
     	boolean[][] expected = {
     			{false, false, false},
     			{false, true},
