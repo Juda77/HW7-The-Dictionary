@@ -12,7 +12,7 @@ public class ArrayDictionaryTest {
         assertTrue(dict.add(2, 82));
         assertTrue(dict.add(4, 84));
         assertTrue(dict.add(7, 87));
-        System.out.println(dict);
+  
     }
 
     @Test
